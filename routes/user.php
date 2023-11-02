@@ -15,7 +15,7 @@ Route::get('/', function () {
     $teachers = Teacher::all();
     $products = Shop::latest()->limit(4)->get();
     $events = Event::latest()->limit(3)->get();
-    return view('windows.home.index', ['course' => $course, 'teachers' => $teachers, 'products' => $products, 'events' => $events]);
+    return view('user.windows.home.index', ['course' => $course, 'teachers' => $teachers, 'products' => $products, 'events' => $events]);
     // return view('welcome');
 });
 
