@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/contact', function () {
-    return view('windows.contact.index', ['name' => 'Contact']);
+    return view('user.windows.contact.index', ['name' => 'Contact']);
 });
 
 Route::get('/about', function () {
