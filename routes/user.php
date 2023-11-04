@@ -25,7 +25,7 @@ Route::get('/contact', function () {
 
 Route::get('/about', function () {
     $teachers = Teacher::all();
-    return view('windows.about.index', ['name' => 'About Us', 'teachers' => $teachers]);
+    return view('user.windows.about.index', ['name' => 'About Us', 'teachers' => $teachers]);
 });
 
 Route::get('/teachers', function () {
