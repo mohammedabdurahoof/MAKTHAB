@@ -1,56 +1,67 @@
-<!--====== ABOUT PART START ======-->
-    
-<section id="about-part" class="pt-65">
+<!-- START SECTION ABOUT -->
+<section id="about_section" class="overflow_hide staggered-animation-wrap">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div class="section-title mt-50">
-                    <h5>About us</h5>
-                    <h2>Welcome to Mandza </h2>
-                </div> <!-- section title -->
-                <div class="about-cont">
-                    <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris. <br> <br> auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris</p>
-                    <a href="#" class="main-btn mt-55">Learn More</a>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="pr-lg-4 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                    <div class="heading_s1">
+                        <span class="sub_heading">About Us</span>
+                        <h2>Take Better Education For a Better Knowledge with us</h2>
+                    </div>
+                    <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                        embarrassing hidden in the middle of text.All the Lorem Ipsum generators on the Internet
+                        tend to repeat predefined chunks as necessary</p>
+                    <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                        embarrassing hidden in the middle of text.</p>
+                    <a href="#" class="btn btn-outline-black">Read More</a>
                 </div>
-            </div> <!-- about cont -->
-            <div class="col-lg-6 offset-lg-1">
-                <div class="about-event mt-50">
-                    <div class="event-title">
-                        <h3>Upcoming events</h3>
-                    </div> <!-- event title -->
-                    <ul>
-                        <li>
-                            <div class="single-event">
-                                <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                <a href="events-single.html"><h4>Campus clean workshop</h4></a>
-                                <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="single-event">
-                                <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                <a href="events-single.html"><h4>Tech Summit</h4></a>
-                                <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="single-event">
-                                <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                <a href="events-single.html"><h4>Environment conference</h4></a>
-                                <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
-                            </div>
-                        </li>
-                    </ul> 
-                </div> <!-- about event -->
             </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-    <div class="about-bg">
-        <img src="images/about/bg-1.png" alt="About">
+            <div class="col-md-6">
+                <div class="animation fancy_img" data-animation="fadeInUp" data-animation-delay="0.01s">
+                    <div class="overlay_bg_30">
+                        <img src="{{ asset('assets/user/images/about_img3.jpg') }}" alt="about_img3" />
+                        <a href="https://www.youtube.com/watch?v=7e90gBu4pas" class="video_popup video_play">
+                            <span class="ripple"><i class="ion-play ml-1"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ol_shape1">
+        <div class="staggered-animation" data-animation="bounceInDown" data-animation-delay="0.1s">
+            <img data-parallax='{"y": -30, "smoothness": 20}' src="{{ asset('assets/user/images/shape1.png') }}" alt="shape1" />
+        </div>
+    </div>
+    <div class="ol_shape2">
+        <div class="staggered-animation" data-animation="bounceInUp" data-animation-delay="0.2s">
+            <img data-parallax='{"y": -30, "smoothness": 20}' src="{{ asset('assets/user/images/shape2.png') }}" alt="shape2" />
+        </div>
+    </div>
+    <div class="ol_shape3">
+        <div class="staggered-animation" data-animation="bounceInRight" data-animation-delay="0.3s">
+            <img data-parallax='{"y": 30, "smoothness": 20}' src="{{ asset('assets/user/images/shape3.png') }}" alt="shape3" />
+        </div>
+    </div>
+    <div class="ol_shape4">
+        <div class="staggered-animation" data-animation="bounceInUp" data-animation-delay="0.4s">
+            <img data-parallax='{"y": -30, "smoothness": 20}' src="{{ asset('assets/user/images/shape4.png') }}" alt="shape4" />
+        </div>
+    </div>
+    <div class="ol_shape5">
+        <div class="staggered-animation" data-animation="bounceInLeft" data-animation-delay="0.5s">
+            <img data-parallax='{"y": -30, "smoothness": 20}' src="{{ asset('assets/user/images/shape5.png') }}" alt="shape5" />
+        </div>
+    </div>
+    <div class="ol_shape6">
+        <div class="staggered-animation" data-animation="bounceInDown" data-animation-delay="0.6s">
+            <img data-parallax='{"y": 30, "smoothness": 20}' src="{{ asset('assets/user/images/shape6.png') }}" alt="shape6" />
+        </div>
+    </div>
+    <div class="ol_shape7">
+        <div class="staggered-animation" data-animation="bounceInLeft" data-animation-delay="0.7s">
+            <img data-parallax='{"y": -30, "smoothness": 20}' src="{{ asset('assets/user/images/shape7.png') }}" alt="shape7" />
+        </div>
     </div>
 </section>
-
-<!--====== ABOUT PART ENDS ======-->
+<!-- END SECTION ABOUT -->

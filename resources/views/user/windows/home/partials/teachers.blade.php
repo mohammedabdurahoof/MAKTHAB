@@ -1,171 +1,88 @@
-<!--====== TEACHERS PART START ======-->
-
-<section id="teachers-part" class="pt-70 pb-120">
+<!-- START SECTION TEACHER -->
+<section class="bg_linen">
     <div class="container">
-        <div class="row">
-            {{-- <div class="col-lg-5"> --}}
-            <div class="section-title mt-50">
-                <h5>Featured Faculties</h5>
-                <h2>Meet our faculties</h2>
-            </div> <!-- section title -->
-            {{-- <div class="teachers-cont">
-                    <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris. <br> <br> auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris</p>
-                    <a href="#" class="main-btn mt-55">Career with us</a>
-                </div> <!-- teachers cont --> --}}
-            <div class="teachers mt-20">
-                <div class="row">
-                    @foreach ($teachers as $teacher)
-                        <div class="col-sm-6 col-lg-3">
-                            <div class="single-teachers mt-30 text-center">
-                                <div class="image">
-                                    <img src="{{ asset('images/teacher') . '/' . $teacher->image }}" alt="Teachers">
-                                </div>
-                                <div class="cont">
-                                    <a href="/teachers/{{ $teacher->id }}">
-                                        <h6>{{ $teacher->name }}</h6>
-                                    </a>
-                                    <span>{{ $teacher->position }}</span>
-                                </div>
-                            </div> <!-- single teachers -->
-                        </div>
-                    @endforeach
-
-                    
-                    
-                </div> <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8">
+                <div class="text-center animation" data-animation="fadeInUp" data-animation-delay="0.01s">
+                    <div class="heading_s1 text-center">
+                        <span class="sub_heading">Our Faculty</span>
+                        <h2>Best Teachers</h2>
+                    </div>
+                    <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                        embarrassing hidden in the middle of text</p>
+                </div>
             </div>
-            {{-- </div> --}}
-            {{-- <div class="col-lg-6 offset-lg-1"> --}}
-            {{-- <div class="happy-student mt-55">
-                    <div class="happy-title">
-                        <h3>Happy Students</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="team_box team_style1 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                    <div class="team_img">
+                        <img src="{{ asset('assets/user/images/team_img1.jpg') }}" alt="team1">
+                        <ul class="list_none social_icons social_white">
+                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                        </ul>
                     </div>
-                    <div class="student-slide slick-initialized slick-slider">
-                        <div class="slick-list draggable">
-                            <div class="slick-track"
-                                style="opacity: 1; width: 3710px; transform: translate3d(-530px, 0px, 0px);">
-                                <div class="single-student slick-slide slick-cloned" data-slick-index="-1"
-                                    aria-hidden="true" tabindex="-1" style="width: 530px;">
-                                    <img src="{{ asset('assets/images/quote.png') }}" alt="Quote">
-                                    <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id
-                                        elit. Duis sed odio sit ametAliquetn sollicitudirem quibibendum auci elit cons
-                                        equat ipsutis sem nibh id elit. Duis sed odio sit amet</p>
-                                    <h6>Mark anthem</h6>
-                                    <span>Bsc, Engineering</span>
-                                </div>
-                                <div class="single-student slick-slide slick-current slick-active" data-slick-index="0"
-                                    aria-hidden="false" tabindex="0" style="width: 530px;">
-                                    <img src="{{ asset('assets/images/quote.png') }}" alt="Quote">
-                                    <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id
-                                        elit. Duis sed odio sit amet Aliquetn sollicitudirem quibibendum auci elit cons
-                                        equat ipsutis sem nibh id elit. Duis sed odio sit amet Aliquetn sollicitudirem
-                                        quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit
-                                        amet</p>
-                                    <h6>Mark anthem</h6>
-                                    <span>Bsc, Engineering</span>
-                                </div>
-                                <div class="single-student slick-slide" data-slick-index="1" aria-hidden="true"
-                                    tabindex="-1" style="width: 530px;">
-                                    <img src="{{ asset('assets/images/quote.png') }}" alt="Quote">
-                                    <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id
-                                        elit. Duis sed odio sit amet</p>
-                                    <h6>Mark anthem</h6>
-                                    <span>Bsc, Engineering</span>
-                                </div>
-                                <div class="single-student slick-slide" data-slick-index="2" aria-hidden="true"
-                                    tabindex="-1" style="width: 530px;">
-                                    <img src="{{ asset('assets/images/quote.png') }}" alt="Quote">
-                                    <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id
-                                        elit. Duis sed odio sit amet</p>
-                                    <h6>Mark anthem</h6>
-                                    <span>Bsc, Engineering</span>
-                                </div>
-                                <div class="single-student slick-slide slick-cloned" data-slick-index="3"
-                                    aria-hidden="true" tabindex="-1" style="width: 530px;">
-                                    <img src="{{ asset('assets/images/quote.png') }}" alt="Quote">
-                                    <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id
-                                        elit. Duis sed odio sit amet</p>
-                                    <h6>Mark anthem</h6>
-                                    <span>Bsc, Engineering</span>
-                                </div>
-                                <div class="single-student slick-slide slick-cloned" data-slick-index="4"
-                                    aria-hidden="true" tabindex="-1" style="width: 530px;">
-                                    <img src="{{ asset('assets/images/quote.png') }}" alt="Quote">
-                                    <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id
-                                        elit. Duis sed odio sit amet</p>
-                                    <h6>Mark anthem</h6>
-                                    <span>Bsc, Engineering</span>
-                                </div>
-                                <div class="single-student slick-slide slick-cloned" data-slick-index="5"
-                                    aria-hidden="true" tabindex="-1" style="width: 530px;">
-                                    <img src="{{ asset('assets/images/quote.png') }}" alt="Quote">
-                                    <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id
-                                        elit. Duis sed odio sit amet</p>
-                                    <h6>Mark anthem</h6>
-                                    <span>Bsc, Engineering</span>
-                                </div>
-                            </div>
-                        </div> <!-- single student -->
-
-                        <!-- single student -->
-
-                        <!-- single student -->
-                    </div> <!-- student slide -->
-                    <div class="student-image">
-                        <img src="{{ asset('assets/images/happy.png') }}" alt="Image">
+                    <div class="team_title radius_lbrb_10 text-center">
+                        <h5><a href="#">Aden Smith</a></h5>
+                        <span>Head Of Department</span>
                     </div>
-                </div> --}}
-            {{-- <div class="teachers mt-20">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="single-teachers mt-30 text-center">
-                                <div class="image">
-                                    <img src="{{ asset('assets/images/teachers/t-1.jpg') }}" alt="Teachers">
-                                </div>
-                                <div class="cont">
-                                    <a href="teachers-single.html"><h6>Mark Alen</h6></a>
-                                    <span>Vice Chancellor</span>
-                                </div>
-                            </div> <!-- single teachers -->
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="single-teachers mt-30 text-center">
-                                <div class="image">
-                                    <img src="{{ asset('assets/images/teachers/t-2.jpg') }}" alt="Teachers">
-                                </div>
-                                <div class="cont">
-                                    <a href="teachers-single.html"><h6>David card</h6></a>
-                                    <span>Pro Chancellor</span>
-                                </div>
-                            </div> <!-- single teachers -->
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="single-teachers mt-30 text-center">
-                                <div class="image">
-                                    <img src="{{ asset('assets/images/teachers/t-3.jpg') }}" alt="Teachers">
-                                </div>
-                                <div class="cont">
-                                    <a href="teachers-single.html"><h6>Rebeka Alig</h6></a>
-                                    <span>Pro Chancellor</span>
-                                </div>
-                            </div> <!-- single teachers -->
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="single-teachers mt-30 text-center">
-                                <div class="image">
-                                    <img src="{{ asset('assets/images/teachers/t-4.jpg') }}" alt="Teachers">
-                                </div>
-                                <div class="cont">
-                                    <a href="teachers-single.html"><h6>Hanna Bein</h6></a>
-                                    <span>Aerobics head</span>
-                                </div>
-                            </div> <!-- single teachers -->
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- teachers -->
-            </div> --}}
-        </div> <!-- row -->
-    </div> <!-- container -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="team_box team_style1 animation" data-animation="fadeInUp" data-animation-delay="0.03s">
+                    <div class="team_img">
+                        <img src="{{ asset('assets/user/images/team_img2.jpg') }}" alt="team2">
+                        <ul class="list_none social_icons social_white">
+                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="team_title radius_lbrb_10 text-center">
+                        <h5><a href="#">Kally Brooks</a></h5>
+                        <span>Professor</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="team_box team_style1 animation" data-animation="fadeInUp" data-animation-delay="0.04s">
+                    <div class="team_img">
+                        <img src="{{ asset('assets/user/images/team_img3.jpg') }}" alt="team3">
+                        <ul class="list_none social_icons social_white">
+                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="team_title radius_lbrb_10 text-center">
+                        <h5><a href="#">David clark</a></h5>
+                        <span>Chemistry Teacher</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="team_box team_style1 animation" data-animation="fadeInUp" data-animation-delay="0.05s">
+                    <div class="team_img">
+                        <img src="{{ asset('assets/user/images/team_img6.jpg') }}" alt="team6">
+                        <ul class="list_none social_icons social_white">
+                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="team_title radius_lbrb_10 text-center">
+                        <h5><a href="#">Jesica Belly</a></h5>
+                        <span>Chemistry Teacher</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-
-<!--====== TEACHERS PART ENDS ======-->
+<!-- END SECTION TEACHER -->

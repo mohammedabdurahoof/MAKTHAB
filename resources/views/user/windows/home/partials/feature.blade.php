@@ -1,55 +1,98 @@
-<section id="video-feature" class="bg_cover pt-60 pb-110" style="background-image: url({{ asset('assets/images/facilities-image.jpg') }})">
+<!-- START SECTION FEATURE -->
+<section class="bg_linen">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 order-last order-lg-first">
-                <div class="video text-lg-left text-center pt-50">
-                    {{-- <a class="Video-popup" href="https://www.youtube.com/watch?v=YiCMD825jw4"><i class="fa fa-play"></i></a> --}}
-                </div> <!-- row -->
-            </div>
-            <div class="col-lg-5 offset-lg-1 order-first order-lg-last">
-                <div class="feature pt-50">
-                    <div class="feature-title">
-                        <h3>Our Facilities</h3>
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8">
+                <div class="text-center animation" data-animation="fadeInUp" data-animation-delay="0.01s">
+                    <div class="heading_s1 text-center">
+                        <span class="sub_heading">Read our differene</span>
+                        <h2>Why Choose Eduglobal</h2>
                     </div>
-                    <ul>
-                        <li>
-                            <div class="single-feature">
-                                <div class="icon">
-                                    <img src="{{ asset('assets/images/all-icon/f-1.png') }}" alt="icon">
-                                </div>
-                                <div class="cont">
-                                    <h4>Personalized Learning Paths</h4>
-                                    <p>Create a feature that allows learners to customize their learning experience by selecting courses and resources that align with their specific interests and goals.
-                                    </p>
-                                </div>
-                            </div> <!-- single feature -->
-                        </li>
-                        <li>
-                            <div class="single-feature">
-                                <div class="icon">
-                                    <img src="{{ asset('assets/images/all-icon/f-2.png') }}" alt="icon">
-                                </div>
-                                <div class="cont">
-                                    <h4>Certification Programs</h4>
-                                    <p>Develop accredited certification programs that learners can complete to demonstrate their expertise in specific areas of psychology.</p>
-                                 </div>
-                            </div> <!-- single feature -->
-                        </li>
-                        <li>
-                            <div class="single-feature">
-                                <div class="icon">
-                                    <img src="{{ asset('assets/images/all-icon/f-3.png') }}" alt="icon">
-                                </div>
-                                <div class="cont">
-                                    <h4>One-on-One Coaching</h4>
-                                    <p>Offer one-on-one coaching or counseling sessions with qualified psychologists for learners who seek personalized guidance and support.</p>
-                                </div>
-                            </div> <!-- single feature -->
-                        </li>
-                    </ul>
-                </div> <!-- feature -->
+                    <p>If you are going to use a passage of you need to be sure there isn't anything embarrassing
+                        hidden in the middle of text</p>
+                </div>
             </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-    <div class="feature-bg"></div> <!-- feature bg -->
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="icon_box text-center bg-white icon_box_style3 box_shadow2 radius_all_10 animation"
+                    data-animation="fadeInUp" data-animation-delay="0.02s">
+                    <div class="box_icon bg_lightdanger mb-3">
+                        <i class="fa fa-book text_danger"></i>
+                    </div>
+                    <div class="intro_desc">
+                        <h5>Books & Library</h5>
+                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                            anything embarrassing hidden in the middle of text</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="icon_box text-center bg-white icon_box_style3 box_shadow2 radius_all_10 animation"
+                    data-animation="fadeInUp" data-animation-delay="0.03s">
+                    <div class="box_icon bg_lightorange mb-3">
+                        <i class="fa fa-globe text_orange"></i>
+                    </div>
+                    <div class="intro_desc">
+                        <h5>Learn Courses Online</h5>
+                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                            anything embarrassing hidden in the middle of text</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="icon_box text-center bg-white icon_box_style3 box_shadow2 radius_all_10 animation"
+                    data-animation="fadeInUp" data-animation-delay="0.04s">
+                    <div class="box_icon bg_lightblue mb-3">
+                        <i class="fa fa-user-tie text_blue"></i>
+                    </div>
+                    <div class="intro_desc">
+                        <h5>Expert Instructors</h5>
+                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                            anything embarrassing hidden in the middle of text</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="icon_box text-center bg-white icon_box_style3 box_shadow2 radius_all_10 animation"
+                    data-animation="fadeInUp" data-animation-delay="0.02s">
+                    <div class="box_icon bg_lightnavy mb-3">
+                        <i class="fa fa-headphones-alt text_light_navy"></i>
+                    </div>
+                    <div class="intro_desc">
+                        <h5>Music Programs</h5>
+                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                            anything embarrassing hidden in the middle of text</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="icon_box text-center bg-white icon_box_style3 box_shadow2 radius_all_10 animation"
+                    data-animation="fadeInUp" data-animation-delay="0.03s">
+                    <div class="box_icon bg_lightblu2 mb-3">
+                        <i class="fa fa-graduation-cap text_blue2"></i>
+                    </div>
+                    <div class="intro_desc">
+                        <h5>Scholarship</h5>
+                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                            anything embarrassing hidden in the middle of text</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="icon_box text-center bg-white icon_box_style3 box_shadow2 radius_all_10 animation"
+                    data-animation="fadeInUp" data-animation-delay="0.04s">
+                    <div class="box_icon bg_lightpink mb-3">
+                        <i class="fa fa-child text_pink"></i>
+                    </div>
+                    <div class="intro_desc">
+                        <h5>Kids Education</h5>
+                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                            anything embarrassing hidden in the middle of text</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+<!-- END SECTION FEATURE -->
