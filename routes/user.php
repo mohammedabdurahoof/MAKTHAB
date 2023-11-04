@@ -98,7 +98,7 @@ Route::get('/shop/{id}', function ($id) {
 
 Route::get('/gallery', function () {
     $gallery = Gallery::all()->reverse();
-    return view('windows.gallery.index', ['name' => 'Gallery', 'gallery' => $gallery]);
+    return view('user.windows.gallery.index', ['name' => 'Gallery', 'gallery' => $gallery]);
 });
 
 Route::get('/policy', function () {
