@@ -106,5 +106,5 @@ Route::get('/policy', function () {
 });
 
 Route::get('/faq', function () {
-    return view('windows.faq.index', ['name' => 'FAQ']);
+    return view('user.windows.faq.index', ['name' => 'FAQ']);
 });
