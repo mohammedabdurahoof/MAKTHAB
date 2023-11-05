@@ -30,13 +30,13 @@ Route::get('/about', function () {
 
 Route::get('/teachers', function () {
     $teachers = Teacher::all();
-    return view('windows.teachers.index', ['name' => 'Teachers', 'teachers' => $teachers]);
+    return view('user.windows.teachers.index', ['name' => 'Teachers', 'teachers' => $teachers]);
 });
 
 Route::get('/teachers/{id}', function ($id) {
     $teacher = Teacher::where('id', $id)->first();
     $courses = Courses::where('teacherId', $id)->get();
-    return view('windows.teachers.single', ['name' => 'Teachers', 'teacher' => $teacher, 'courses' => $courses]);
+    return view('user.windows.teachers.single', ['name' => 'Teachers', 'teacher' => $teacher, 'courses' => $courses]);
 });
 
 Route::get('/courses', function () {
