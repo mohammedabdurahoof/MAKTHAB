@@ -1,122 +1,263 @@
-@extends('layouts.layout')
+@extends('user.layouts.layout')
 
 @section('contant')
-    @include('partials.page_banner')
-    <!--====== COURSES PART START ======-->
-
-    <section id="courses-part" class="pt-120 pb-120 gray-bg">
+    @include('user.partials.page_banner')
+    <!-- START SECTION COURSES -->
+    <section class="small_pt">
         <div class="container">
-            {{-- <div class="row">
-                <div class="col-lg-12">
-                    <div class="courses-top-search">
-                        <ul class="nav float-left" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="active" id="courses-grid-tab" data-toggle="tab" href="#courses-grid"
-                                    role="tab" aria-controls="courses-grid" aria-selected="true"><i
-                                        class="fa fa-th-large"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="courses-list-tab" data-toggle="tab" href="#courses-list" role="tab"
-                                    aria-controls="courses-list" aria-selected="false"><i class="fa fa-th-list"></i></a>
-                            </li>
-                            <li class="nav-item">Showing 4 0f 24 Results</li>
-                        </ul>
-                        <!-- nav -->
-
-                        <div class="courses-search float-right">
-                            <form action="#">
-                                <input type="text" placeholder="Search">
-                                <button type="button"><i class="fa fa-search"></i></button>
-                            </form>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="content_box radius_all_10 box_shadow1 animation" data-animation="fadeInUp"
+                        data-animation-delay="0.01s">
+                        <div class="content_img radius_ltrt_10">
+                            <a href="#"><img src="{{ asset('assets/user/images/course_img1.jpg') }}" alt="course_img1" /></a>
                         </div>
-                        <!-- courses search -->
-                    </div>
-                    <!-- courses top search -->
-                </div>
-            </div> --}}
-            <!-- row -->
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="courses-grid" role="tabpanel" aria-labelledby="courses-grid-tab">
-                    <div class="row">
-                        @foreach ($courses as $course)
-                            <div class="col-lg-4 col-md-6">
-                                <div class="single-course mt-30">
-                                    <div class="thum">
-                                        <div class="image">
-                                            <img src="{{ asset('images/course') . '/' . $course->courseImage }}"
-                                                alt="Course">
-                                        </div>
-                                        <div class="price">
-                                            <span>{{ $course->price == 0 ? 'Free' : '₹'.$course->price }}</span>
-                                        </div>
-                                    </div>
-                                    <div class="cont">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                        <span>(20 Reviews)</span><br>
-                                        <a href="courses/{{ $course->id }}">
-                                            <h4>{{ $course->courseName }}</h4>
-                                        </a>
-                                        <div class="course-teacher">
-                                            <div class="thum">
-                                                <a href="#"><img
-                                                        src="{{ asset('images/teacher') . '/' . $course->teacherImage }}"
-                                                        alt="teacher"></a>
-                                            </div>
-                                            <div class="name">
-                                                <a href="#">
-                                                    <h6>{{ $course->name }}</h6>
-                                                </a>
-                                            </div>
-                                            <div class="admin">
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-user"></i><span>31</span></a></li>
-                                                    <li><a href="#"><i class="fa fa-heart"></i><span>10</span></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="content_desc">
+                            <h4 class="content_title"><a href="#">Nullam id varius nunc id varius nunc</a></h4>
+                            <p>If you are going to use a passage of Lorem Ipsum you need to be sure anything embarrassing
+                                hidden in the middle of text.</p>
+                            <div class="courses_info">
+                                <div class="rating_stars">
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star-half"></i>
                                 </div>
-                                <!-- single course -->
+                                <ul class="list_none content_meta">
+                                    <li><a href="#"><i class="ti-user"></i>31</a></li>
+                                    <li><a href="#"><i class="ti-heart"></i>10</a></li>
+                                </ul>
                             </div>
-                        @endforeach
+                        </div>
+                        <div class="content_footer">
+                            <div class="teacher">
+                                <a href="#"><img src="{{ asset('assets/user/images/user1.jpg') }}" alt="user1"><span>Alia
+                                        Noor</span></a>
+                            </div>
+                            <div class="price">
+                                <span class="alert alert-success">Free</span>
+                            </div>
+                        </div>
                     </div>
-                    <!-- row -->
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="content_box radius_all_10 box_shadow1 animation" data-animation="fadeInUp"
+                        data-animation-delay="0.02s">
+                        <div class="content_img radius_ltrt_10">
+                            <a href="#"><img src="{{ asset('assets/user/images/course_img2.jpg') }}" alt="course_img2" /></a>
+                        </div>
+                        <div class="content_desc">
+                            <h4 class="content_title"><a href="#">Nullam id varius nunc id varius nunc</a></h4>
+                            <p>If you are going to use a passage of Lorem Ipsum you need to be sure anything embarrassing
+                                hidden in the middle of text.</p>
+                            <div class="courses_info">
+                                <div class="rating_stars">
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star-half"></i>
+                                </div>
+                                <ul class="list_none content_meta">
+                                    <li><a href="#"><i class="ti-user"></i>31</a></li>
+                                    <li><a href="#"><i class="ti-heart"></i>10</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content_footer">
+                            <div class="teacher">
+                                <a href="#"><img src="{{ asset('assets/user/images/user2.jpg') }}" alt="user2"><span>Dany
+                                        Core</span></a>
+                            </div>
+                            <div class="price">
+                                <span class="alert alert-info">$49</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="content_box radius_all_10 box_shadow1 animation" data-animation="fadeInUp"
+                        data-animation-delay="0.03s">
+                        <div class="content_img radius_ltrt_10">
+                            <a href="#"><img src="{{ asset('assets/user/images/course_img3.jpg') }}" alt="course_img3" /></a>
+                        </div>
+                        <div class="content_desc">
+                            <h4 class="content_title"><a href="#">Nullam id varius nunc id varius nunc</a></h4>
+                            <p>If you are going to use a passage of Lorem Ipsum you need to be sure anything embarrassing
+                                hidden in the middle of text.</p>
+                            <div class="courses_info">
+                                <div class="rating_stars">
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star-half"></i>
+                                </div>
+                                <ul class="list_none content_meta">
+                                    <li><a href="#"><i class="ti-user"></i>31</a></li>
+                                    <li><a href="#"><i class="ti-heart"></i>10</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content_footer">
+                            <div class="teacher">
+                                <a href="#"><img src="{{ asset('assets/user/images/user3.jpg') }}" alt="user3"><span>Smith
+                                        Parker</span></a>
+                            </div>
+                            <div class="price">
+                                <span class="alert alert-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="content_box radius_all_10 box_shadow1 animation" data-animation="fadeInUp"
+                        data-animation-delay="0.04s">
+                        <div class="content_img radius_ltrt_10">
+                            <a href="#"><img src="{{ asset('assets/user/images/course_img4.jpg') }}" alt="course_img4" /></a>
+                        </div>
+                        <div class="content_desc">
+                            <h4 class="content_title"><a href="#">Nullam id varius nunc id varius nunc</a></h4>
+                            <p>If you are going to use a passage of Lorem Ipsum you need to be sure anything embarrassing
+                                hidden in the middle of text.</p>
+                            <div class="courses_info">
+                                <div class="rating_stars">
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star-half"></i>
+                                </div>
+                                <ul class="list_none content_meta">
+                                    <li><a href="#"><i class="ti-user"></i>31</a></li>
+                                    <li><a href="#"><i class="ti-heart"></i>10</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content_footer">
+                            <div class="teacher">
+                                <a href="#"><img src="{{ asset('assets/user/images/user4.jpg') }}" alt="user4"><span>Sara
+                                        Robert</span></a>
+                            </div>
+                            <div class="price">
+                                <span class="alert alert-info">$54</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="content_box radius_all_10 box_shadow1 animation" data-animation="fadeInUp"
+                        data-animation-delay="0.05s">
+                        <div class="content_img radius_ltrt_10">
+                            <a href="#"><img src="{{ asset('assets/user/images/course_img5.jpg') }}" alt="course_img5" /></a>
+                        </div>
+                        <div class="content_desc">
+                            <h4 class="content_title"><a href="#">Nullam id varius nunc id varius nunc</a></h4>
+                            <p>If you are going to use a passage of Lorem Ipsum you need to be sure anything embarrassing
+                                hidden in the middle of text.</p>
+                            <div class="courses_info">
+                                <div class="rating_stars">
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star-half"></i>
+                                </div>
+                                <ul class="list_none content_meta">
+                                    <li><a href="#"><i class="ti-user"></i>31</a></li>
+                                    <li><a href="#"><i class="ti-heart"></i>10</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content_footer">
+                            <div class="teacher">
+                                <a href="#"><img src="{{ asset('assets/user/images/user5.jpg') }}" alt="user5"><span>Wendy
+                                        Nahse</span></a>
+                            </div>
+                            <div class="price">
+                                <span class="alert alert-info">$36</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="content_box radius_all_10 box_shadow1 animation" data-animation="fadeInUp"
+                        data-animation-delay="0.06s">
+                        <div class="content_img radius_ltrt_10">
+                            <a href="#"><img src="{{ asset('assets/user/images/course_img6.jpg') }}" alt="course_img6" /></a>
+                        </div>
+                        <div class="content_desc">
+                            <h4 class="content_title"><a href="#">Nullam id varius nunc id varius nunc</a></h4>
+                            <p>If you are going to use a passage of Lorem Ipsum you need to be sure anything embarrassing
+                                hidden in the middle of text.</p>
+                            <div class="courses_info">
+                                <div class="rating_stars">
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star-half"></i>
+                                </div>
+                                <ul class="list_none content_meta">
+                                    <li><a href="#"><i class="ti-user"></i>31</a></li>
+                                    <li><a href="#"><i class="ti-heart"></i>10</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content_footer">
+                            <div class="teacher">
+                                <a href="#"><img src="{{ asset('assets/user/images/user6.jpg') }}" alt="user6"><span>John
+                                        Wood</span></a>
+                            </div>
+                            <div class="price">
+                                <span class="alert alert-info">$22</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- tab content -->
-            {{-- <div class="row">
-                <div class="col-lg-12">
-                    <nav class="courses-pagination mt-50">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item">
-                                <a href="#" aria-label="Previous">
-                                    <i class="fa fa-angle-left"></i>
-                                </a>
-                            </li>
-                            <li class="page-item"><a class="active" href="#">1</a></li>
-                            <li class="page-item"><a href="#">2</a></li>
-                            <li class="page-item"><a href="#">3</a></li>
-                            <li class="page-item">
-                                <a href="#" aria-label="Next">
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- courses pagination -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="medium_divider"></div>
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"><i
+                                    class="ion-ios-arrow-thin-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i
+                                    class="ion-ios-arrow-thin-right"></i></a></li>
+                    </ul>
                 </div>
-            </div> --}}
-            <!-- row -->
+            </div>
         </div>
-        <!-- container -->
     </section>
+    <!-- END SECTION COURSES -->
 
-    <!--====== COURSES PART ENDS ======-->
+    <!-- END SECTION CALL TO ACTION -->
+    <section class="bg_default small_pt small_pb">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="text_white cta_section">
+                        <div class="medium_divider d-block d-md-none"></div>
+                        <div class="heading_s1 heading_light">
+                            <h2>Get The Coaching Training Today!</h2>
+                        </div>
+                        <p>If you are going to use a passage of embarrassing hidden in the middle of text</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-md-right">
+                        <a href="#" class="btn btn-outline-white">Get Started</a>
+                    </div>
+                    <div class="medium_divider d-block d-md-none"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END SECTION CALL TO ACTION -->
 @endsection

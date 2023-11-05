@@ -41,24 +41,24 @@ Route::get('/teachers/{id}', function ($id) {
 
 Route::get('/courses', function () {
     $courses = Courses::join('teachers', 'courses.teacherId', 'teachers.id')->select('courses.image as courseImage', 'teachers.image as teacherImage', 'courses.id', 'courseName', 'price', 'name')->get();
-    return view('windows.courses.index', ['name' => 'Courses', 'courses' => $courses]);
+    return view('user.windows.courses.index', ['name' => 'Courses', 'courses' => $courses]);
 });
 
 Route::get('/courses/{id}', function ($id) {
     $course = Courses::where('courses.id', $id)->join('teachers', 'courses.teacherId', 'teachers.id')->select('courses.image as courseImage', 'teachers.image as teacherImage', 'courses.id', 'teacherId', 'courseName', 'price', 'position', 'description', 'name', 'category', 'duration', 'courseSummery', 'requirements')->first();
     $newCourses = Courses::limit(4)->where('id', '!=', $id)->get();
     $oldCourses = Courses::latest('courses.created_at')->where('courses.id', '!=', $id)->limit(3)->join('teachers', 'courses.teacherId', 'teachers.id')->select('courses.image as courseImage', 'teachers.image as teacherImage', 'courses.id', 'teacherId', 'courseName', 'price', 'name')->get();
-    return view('windows.courses.single', ['name' => 'Courses', 'course' => $course, 'newCourses' => $newCourses, 'oldCourses' => $oldCourses]);
+    return view('user.windows.courses.single', ['name' => 'Courses', 'course' => $course, 'newCourses' => $newCourses, 'oldCourses' => $oldCourses]);
 });
 
 Route::get('/events', function () {
     $events = Event::all();
-    return view('windows.events.index', ['name' => 'Events', 'events' => $events]);
+    return view('user.windows.events.index', ['name' => 'Events', 'events' => $events]);
 });
 
 Route::get('/events/{id}', function ($id) {
     $event = Event::where('id', $id)->first();
-    return view('windows.events.single', ['name' => 'Events', 'event' => $event]);
+    return view('user.windows.events.single', ['name' => 'Events', 'event' => $event]);
 });
 
 Route::get('/event-register', function () {
