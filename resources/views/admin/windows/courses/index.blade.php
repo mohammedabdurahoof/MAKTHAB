@@ -33,7 +33,6 @@
                                         <th>Name</th>
                                         <th>Category</th>
                                         <th>Teacher</th>
-                                        <th>Duaration</th>
                                         <th>Price</th>
                                         <th>Action</th>
 
@@ -49,7 +48,6 @@
                                             </td>
                                             <td>{{ $course->category }}</td>
                                             <td>{{ $course->teacherId }}</td>
-                                            <td>{{ $course->duration }}</td>
                                             <td>{{ $course->price }}</td>
                                             <td class="table-action">
                                                 <form action="{{ route('courses.destroy', $course->id) }}" method="POST">

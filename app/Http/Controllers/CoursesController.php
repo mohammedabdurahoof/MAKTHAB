@@ -28,9 +28,7 @@ class CoursesController extends Controller
         $request->validate([
             'courseName' => 'required',
             'category' => 'required',
-            'duration' => 'required',
             'courseSummery' => 'required',
-            'requirements' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
         $imageName = time() . '.' . request()->image->getClientOriginalExtension();
@@ -70,9 +68,7 @@ class CoursesController extends Controller
         $request->validate([
             'courseName' => 'required',
             'category' => 'required',
-            'duration' => 'required',
             'courseSummery' => 'required',
-            'requirements' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
         // dd(request()->image);

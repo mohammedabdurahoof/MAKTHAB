@@ -19,10 +19,8 @@ class CreateCoursesTable extends Migration
             $table->string('image');
             $table->string('teacherId')->nullable();
             $table->string('category');
-            $table->integer('duration');
             $table->integer('price')->default(0);
             $table->longText('courseSummery');
-            $table->longText('requirements');
             $table->timestamps();
         });
     }

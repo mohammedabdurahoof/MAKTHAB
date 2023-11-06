@@ -13,10 +13,8 @@ class Courses extends Model
         'courseName',
         'teacherId',
         'category',
-        'duration',
         'price',
         'courseSummery',
-        'requirements',
         'image'
     ];
 }

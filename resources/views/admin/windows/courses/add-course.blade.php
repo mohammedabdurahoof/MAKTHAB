@@ -66,20 +66,20 @@
 
                                 </div>
                                 <div class="row">
-                                    <div class="mb-3 col-md-4">
+                                    <div class="mb-3 col-md-6">
                                         <label class="form-label" for="inputCategory">Category</label>
                                         <input type="text" name="category" class="form-control" id="inputCategory"
                                             required placeholder="Category">
                                     </div>
-                                    <div class="col-md-4 mb-3">
+                                    {{-- <div class="col-md-4 mb-3">
                                         <label class="form-label" for="inputDuaration">Duration</label>
                                         <div class="input-group ">
                                             <input type="number" name="duration" id="inputDuaration" class="form-control"
                                                 required placeholder="Duaration ">
                                             <span class="input-group-text">Days</span>
                                         </div>
-                                    </div>
-                                    <div class="mb-3 col-md-4">
+                                    </div> --}}
+                                    <div class="mb-3 col-md-6">
                                         <label class="form-label" for="inputPrice">Price</label>
                                         <div class="input-group mb-3">
                                             <span class="input-group-text">₹</span>
@@ -93,10 +93,10 @@
                                     <label class="col-form-label text-sm-end">Course Summery</label>
                                     <textarea class="form-control" name="courseSummery" placeholder="Course Summery" rows="5" required></textarea>
                                 </div>
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <label class="col-form-label text-sm-end">Requirements</label>
                                     <textarea class="form-control" name="requirements" placeholder="Requirements" rows="5" required></textarea>
-                                </div>
+                                </div> --}}
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div>
