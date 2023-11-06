@@ -7,7 +7,8 @@
                 </button>
                 <div class="row no-gutters">
                     <div class="col-lg-5">
-                        <div class="h-100 background_bg radius_ltlb_5" data-img-src="assets/images/login_img.jpg">
+                        <div class="h-100 background_bg radius_ltlb_5"
+                            data-img-src="{{ asset('assets/user/images/login_img.jpg') }}">
                         </div>
                     </div>
                     <div class="col-lg-7">
@@ -17,24 +18,29 @@
                                     <a class="nav-link active" id="login-tab1" data-toggle="tab" href="#login"
                                         role="tab" aria-controls="login" aria-selected="true">Login</a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" id="signup-tab1" data-toggle="tab" href="#signup" role="tab"
                                         aria-controls="signup" aria-selected="false">Sign Up</a>
-                                </li>
+                                </li> --}}
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="login" role="tabpanel">
                                     <div class="heading_s1 mb-3">
                                         <h4>Login</h4>
                                     </div>
-                                    <form method="post" class="login">
+                                    <form method="post" class="login" action="{{ route('login') }}">
+                                        @csrf
+                                        @if ($errors->has('email'))
+                                            <span class="text-danger text-left mb-3 ">You entered an incorrect username
+                                                or password. Please try again </span>
+                                        @endif
                                         <div class="form-group">
                                             <input type="text" required="" class="form-control" name="email"
-                                                placeholder="Email">
+                                                placeholder="Email" value="{{ old('email') }}" required>
                                         </div>
                                         <div class="form-group">
                                             <input class="form-control" required="" type="password" name="password"
-                                                placeholder="Password">
+                                                placeholder="Password" required>
                                         </div>
                                         <div class="login_footer form-group">
                                             <a href="#">Lost your password?</a>
@@ -62,7 +68,7 @@
                                                     class="ion-social-googleplus"></i>Google</a></li>
                                     </ul>
                                 </div>
-                                <div class="tab-pane fade" id="signup" role="tabpanel">
+                                {{-- <div class="tab-pane fade" id="signup" role="tabpanel">
                                     <div class="heading_s1 mb-3">
                                         <h4>Sign Up</h4>
                                     </div>
@@ -97,7 +103,7 @@
                                         <li><a href="#" class="btn btn-google"><i
                                                     class="ion-social-googleplus"></i>Google</a></li>
                                     </ul>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
