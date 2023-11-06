@@ -85,17 +85,6 @@ Route::post('/event-register', function (Request $request) {
     return back()->with('success','successfully registered');
 });
 
-Route::get('/shop', function () {
-    $products = Shop::all();
-    return view('windows.shop.index', ['name' => 'Shop', 'products' => $products]);
-});
-
-Route::get('/shop/{id}', function ($id) {
-    $product = Shop::where('id', $id)->first();
-    $products = Shop::limit(4)->get();
-    return view('windows.shop.single', ['name' => 'Shop', 'product' => $product, 'products' => $products]);
-});
-
 Route::get('/gallery', function () {
     $gallery = Gallery::all()->reverse();
     return view('user.windows.gallery.index', ['name' => 'Gallery', 'gallery' => $gallery]);

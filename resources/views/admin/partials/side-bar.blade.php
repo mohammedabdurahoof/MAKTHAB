@@ -1,7 +1,7 @@
 <nav id="sidebar" class="sidebar js-sidebar">
     <div class="sidebar-content js-simplebar">
         <a class="sidebar-brand" href="{{ route('dashboard') }}">
-            <span class="align-middle">Maindza</span>
+            <span class="align-middle">MAKTHAB ACADEMY</span>
         </a>
 
         <ul class="sidebar-nav">
@@ -30,11 +30,6 @@
             <li class="sidebar-item {{ request()->segment(2) == 'events' ? 'active' : '' }}">
                 <a class="sidebar-link" href="{{ route('events.index') }}">
                     <i class="align-middle" data-feather="list"></i> <span class="align-middle">Events</span>
-                </a>
-            </li>
-            <li class="sidebar-item {{ request()->segment(2) == 'shop' ? 'active' : '' }}">
-                <a class="sidebar-link" href="{{ route('shop.index') }}">
-                    <i class="align-middle" data-feather="shopping-cart"></i> <span class="align-middle">Shop</span>
                 </a>
             </li>
             <li class="sidebar-item {{ request()->segment(2) == 'gallery' ? 'active' : '' }}">

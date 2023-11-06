@@ -28,7 +28,6 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::resource('teachers', TeacherController::class);
     Route::resource('events', EventController::class);
     Route::resource('gallery', GalleryController::class);
-    Route::resource('shop', ShopController::class);
 
     Route::post('/confrimCouse', [CoursesController::class,'confrimCouse'])->name('courses.cofrim');
 

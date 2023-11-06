@@ -15,7 +15,7 @@
 
     <link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
-    <title>MINDZA - School of Happiness</title>
+    <title>MAKTHAB ACADEMY</title>
 
     <link href="{{ asset('assets/admin/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/admin/css/style.css') }}" rel="stylesheet">
