@@ -13,9 +13,8 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     $course = Courses::join('teachers', 'courses.teacherId', 'teachers.id')->select('courses.image as courseImage', 'teachers.image as teacherImage', 'courses.id', 'teacherId', 'courseName', 'price', 'name')->get();
     $teachers = Teacher::all();
-    $products = Shop::latest()->limit(4)->get();
     $events = Event::latest()->limit(3)->get();
-    return view('user.windows.home.index', ['course' => $course, 'teachers' => $teachers, 'products' => $products, 'events' => $events]);
+    return view('user.windows.home.index', ['course' => $course, 'teachers' => $teachers,  'events' => $events]);
     // return view('welcome');
 });
 
