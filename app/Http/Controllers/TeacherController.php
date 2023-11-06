@@ -32,12 +32,13 @@ class TeacherController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'type' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', Rules\Password::defaults()],
             'position' => 'required',
-            'description' => 'required',
+            'phone' => 'required',
             'about' => 'required',
-            'achievements' => 'required',
-            'objective' => 'required',
+            'address' => 'required',
+            'yearsofExperience' => 'required',
+            'interest' => 'required',
+            'education' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
@@ -46,12 +47,6 @@ class TeacherController extends Controller
         $imageName = time() . '.' . request()->image->getClientOriginalExtension();
         request()->image->move(public_path('images/teacher'), $imageName);
         Teacher::create($request->post() + ['image' => $imageName]);
-        User::create([
-            'name' => $request->name,
-            'type' => $request->type,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
         return redirect()->route('teachers.index')->with('success', 'Teacher has been added successfully.');
     }
     public function show(Teacher $teacher)
@@ -67,12 +62,16 @@ class TeacherController extends Controller
     public function update(Request $request, Teacher $teacher)
     {
         $request->validate([
-            'name' => 'required',
+            'name' => ['required', 'string', 'max:255'],
+            'type' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'position' => 'required',
-            'description' => 'required',
+            'phone' => 'required',
             'about' => 'required',
-            'achievements' => 'required',
-            'objective' => 'required',
+            'address' => 'required',
+            'yearsofExperience' => 'required',
+            'interest' => 'required',
+            'education' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
         // dd(request()->image);
@@ -120,16 +119,15 @@ class TeacherController extends Controller
     public function addLecture(Request $request)
     {
         // dd($request);
-        
+
     }
 
-    public function getLecture(Request $request)
-    {   
-        $course = Courses::where('id',$request->id)->first();
-        $email = Auth::user()->email;
-        $teacher = Teacher::where('email', $email)->first();
-        $lectures= Lecture::where('courseId',$course->id)->get();
-        // dd($course);
-        return view('Teacher.windows.lecutre.index',['name'=>'Lectures', 'lectures' => $lectures, 'teacher' => $teacher, 'course'=>$course]);
-    }
+    // public function getLecture(Request $request)
+    // {
+    //     $course = Courses::where('id', $request->id)->first();
+    //     $email = Auth::user()->email;
+    //     $teacher = Teacher::where('email', $email)->first();
+    //     // dd($course);
+    //     return view('Teacher.windows.lecutre.index', ['name' => 'Lectures', 'lectures' => $lectures, 'teacher' => $teacher, 'course' => $course]);
+    // }
 }

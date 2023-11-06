@@ -19,14 +19,16 @@ class CreateTeachersTable extends Migration
             $table->string('image');
             $table->string('position');
             $table->string('email');
-            $table->longText('description');
+            $table->string('phone');
+            $table->string('address');
+            $table->string('yearsofExperience');
+            $table->string('interest');
+            $table->string('education');
             $table->longText('about');
-            $table->longText('achievements');
-            $table->longText('objective');
             $table->timestamps();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *

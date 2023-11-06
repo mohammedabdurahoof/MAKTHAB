@@ -12,11 +12,13 @@ class Teacher extends Model
     protected $fillable = [
         'name',
         'position',
-        'description',
         'about',
-        'achievements',
-        'objective',
         'image',
-        'email'
+        'email',
+        'phone',
+        'address',
+        'yearsofExperience',
+        'interest',
+        'education',
     ];
 }
