@@ -9,8 +9,6 @@
 @include('user.windows.home.partials.register')
 @include('user.windows.home.partials.event')
 @include('user.windows.home.partials.teachers')
-@include('user.windows.home.partials.testimonials')
-@include('user.windows.home.partials.news')
 
     <!-- END SECTION NEWSLETTER -->
     <section>
