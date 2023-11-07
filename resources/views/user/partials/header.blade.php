@@ -156,80 +156,32 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li>
-                        <a class="nav-link active" href="/">Home</a>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li><a class="dropdown-item nav-link nav_item" href="about.html">About Us</a></li>
-                                <li class="dropdown">
-                                    <a class="dropdown-item menu-link dropdown-toggler" href="#">Gallery</a>
-                                    <div class="dropdown-menu">
-                                        <ul>
-                                            <li><a class="dropdown-item nav-link nav_item"
-                                                    href="gallery-three-columns.html">Gallery 3 Column Grid</a>
-                                            </li>
-                                            <li><a class="dropdown-item nav-link nav_item"
-                                                    href="gallery-four-columns.html">Gallery 4 Column Grid</a></li>
-                                            <li><a class="dropdown-item nav-link nav_item"
-                                                    href="gallery-masonry-three-columns.html">Gallery 3 Column
-                                                    Masonry</a></li>
-                                            <li><a class="dropdown-item nav-link nav_item"
-                                                    href="gallery-masonry-four-columns.html">Gallery 4 Column
-                                                    Masonry</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li><a class="dropdown-item nav-link nav_item" href="faq.html">Faq</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="404.html">404 Page</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Course</a>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li><a class="dropdown-item nav-link nav_item" href="courses.html">Courses</a>
-                                </li>
-                                <li><a class="dropdown-item nav-link nav_item" href="course-detail.html">Course
-                                        Detail</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Event</a>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li><a class="dropdown-item nav-link nav_item" href="event.html">Event</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="event-detail.html">Event
-                                        Detail</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Teacher</a>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li><a class="dropdown-item nav-link nav_item" href="teacher.html">Teacher</a>
-                                </li>
-                                <li><a class="dropdown-item nav-link nav_item" href="teacher-detail.html">Teacher
-                                        Detail</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Blog</a>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li><a class="dropdown-item nav-link nav_item" href="blog.html">Blog</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="blog-detail.html">Blog
-                                        Detail</a></li>
-                            </ul>
-                        </div>
+                        <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Home</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link {{ request()->is('courses') ? 'active' : '' }}" href="/courses">Course</a>
+                    </li>
+                    <li>
+                        <a class="nav-link {{ request()->is('events') ? 'active' : '' }}" href="/events">Event</a>
+                    </li>
+                    <li>
+                        <a class="nav-link {{ request()->is('teachers') ? 'active' : '' }}" href="/teachers">Teacher</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle nav-link {{ request()->is('gallery') ? 'active' : '' }} {{ request()->is('faq') ? 'active' : '' }}" href="#" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a class="dropdown-item nav-link nav_item {{ request()->is('gallery') ? 'active' : '' }}" href="/gallery">Gallery</a></li>
+                                <li><a class="dropdown-item nav-link nav_item {{ request()->is('faq') ? 'active' : '' }}" href="/faq">Faq</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="/about">About Us</a>
+                    </li>
+                    <li>
+                        <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="/contact">Contact</a>
                     </li>
                 </ul>
             </div>

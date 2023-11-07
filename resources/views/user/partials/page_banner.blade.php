@@ -4,14 +4,14 @@
         <div class="row align-items-center">
             <div class="col-sm-6">
                 <div class="page-title">
-                    <h1>Contact</h1>
+                    <h1>{{$name}}</h1>
                 </div>
             </div>
             <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-sm-end">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{$name}}</li>
                     </ol>
                 </nav>
             </div>
