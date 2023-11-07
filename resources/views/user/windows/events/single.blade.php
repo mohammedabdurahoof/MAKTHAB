@@ -10,7 +10,7 @@
                     <div class="single_event">
                         <div class="content_img">
                             <a href="#">
-                                <img src="{{ asset('assets/user/images/course_img_big.jpg') }}" alt="course_img_big">
+                                <img src="{{ asset('images/events') . '/' . $event->image }}" alt="course_img_big">
                             </a>
                             <div class="event_date radius_all_5">
                                 <h5><span>16</span> May</h5>
@@ -20,11 +20,11 @@
                         <div class="event_title">
                             <div class="row align-items-end">
                                 <div class="col-md-8">
-                                    <h2>Nullam id varius nunc id varius nunc</h2>
+                                    <h2>{{$event->name}}</h2>
                                     <ul class="list_none content_meta mt-2">
-                                        <li><i class="ti-user"></i> <a href="#" class="text_default">John Wood</a>
-                                        </li>
-                                        <li><i class="ti-location-pin"></i><span class="text_default">New York City</span>
+                                        {{-- <li><i class="ti-user"></i> <a href="#" class="text_default">John Wood</a>
+                                        </li> --}}
+                                        <li><i class="ti-location-pin"></i><span class="text_default">{{$event->place}}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -42,27 +42,13 @@
                             </div>
                         </div>
                         <div class="entry_content">
-                            <p>Lorem Ipsu. is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                been the industry's standard dummy text ever since the 1500s when an unknown printer took a
-                                galley of type and scrambled it to make
-                                a type specimen book. It has survived not only five centuries, but also the leap into
-                                electronic typesetting. It was popularised in the 1960s with the release of Letraset sheets
-                                containing Lorem Ipsum passages, and more
-                                recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-                                Ipsum.</p>
-                            <p>Learning to live, study and work in a thriving business capital is exciting, Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur study
-                                and work in a thriving business capital
-                                is exciting, Duis aute irure dolor in reprehenderit in voluptate velit esse.Ut enim ad minim
-                                veniam, Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit
-                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <p>{{$event-> description}}</p>
                         </div>
-                        <div class="event_map">
+                        {{-- <div class="event_map">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193229.77301255226!2d-74.05531241936525!3d40.823236500441624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f613438663b5%3A0xce20073c8862af08!2sW+123rd+St%2C+New+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1533565007513"
                                 allowfullscreen=""></iframe>
-                        </div>
+                        </div> --}}
                         <div class="radius_all_10 box_shadow1 p-4">
                             <div class="comment-title mb-2 mb-sm-4">
                                 <h5>Write a comment</h5>
