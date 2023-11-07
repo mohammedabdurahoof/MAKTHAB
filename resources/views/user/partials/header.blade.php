@@ -159,13 +159,13 @@
                         <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Home</a>
                     </li>
                     <li>
-                        <a class="nav-link {{ request()->is('courses') ? 'active' : '' }}" href="/courses">Course</a>
+                        <a class="nav-link {{ request()->is('courses*') ? 'active' : '' }}" href="/courses">Course</a>
                     </li>
                     <li>
-                        <a class="nav-link {{ request()->is('events') ? 'active' : '' }}" href="/events">Event</a>
+                        <a class="nav-link {{ request()->is('events*') ? 'active' : '' }}" href="/events">Event</a>
                     </li>
                     <li>
-                        <a class="nav-link {{ request()->is('teachers') ? 'active' : '' }}" href="/teachers">Teacher</a>
+                        <a class="nav-link {{ request()->is('teachers*') ? 'active' : '' }}" href="/teachers">Teacher</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle nav-link {{ request()->is('gallery') ? 'active' : '' }} {{ request()->is('faq') ? 'active' : '' }}" href="#" data-toggle="dropdown">Pages</a>

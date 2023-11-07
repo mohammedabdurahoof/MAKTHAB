@@ -10,10 +10,10 @@
                     <div class="single_course">
                         <div class="course_img">
                             <a href="#">
-                                <img src="{{ asset('assets/user/images/course_img_big.jpg') }}" alt="course_img_big">
+                                <img src="{{ asset('images/course') . '/' . $course->courseImage }}" alt="course_img_big">
                             </a>
                             <div class="price">
-                                <span class="alert alert-success"><strong>Price :</strong> Free</span>
+                                <span class="alert alert-success"><strong>Price :</strong> ₹{{ $course->price }}</span>
                             </div>
                             <div class="enroll_btn">
                                 <a href="#" class="btn btn-default btn-sm">Get Enroll</a>
@@ -21,23 +21,24 @@
                         </div>
                         <div class="course_detail alert-warning">
                             <div class="course_title">
-                                <h2>Nullam id varius nunc id varius nunc</h2>
+                                <h2>{{ $course->courseName }}</h2>
                             </div>
                             <div class="countent_detail_meta">
                                 <ul>
                                     <li>
                                         <div class="instructor">
-                                            <img src="{{ asset('assets/user/images/user1.jpg') }}" alt="user1">
+                                            <img src="{{ asset('images/teacher') . '/' . $course->teacherImage }}"
+                                                alt="user1">
                                             <div class="instructor_info">
                                                 <label>Teacher:</label>
-                                                <a href="#">Alia Noor</a>
+                                                <a href="#">{{ $course->name }}</a>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="course_cat">
                                             <label>Categories: </label>
-                                            <a href="#">Development</a><a href="#">Business</a>
+                                            <a href="#">{{ $course->category }}</a>
                                         </div>
                                     </li>
                                     <li>
@@ -67,34 +68,27 @@
                                     <a class="nav-link active" id="overview-tab1" data-toggle="tab" href="#overview"
                                         role="tab" aria-controls="overview" aria-selected="true">Overview</a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" id="curriculum-tab1" data-toggle="tab" href="#curriculum"
                                         role="tab" aria-controls="curriculum" aria-selected="false">curriculum</a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a class="nav-link" id="instructor-tab1" data-toggle="tab" href="#instructor"
                                         role="tab" aria-controls="instructor" aria-selected="false">instructor</a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" id="reviews-tab1" data-toggle="tab" href="#reviews" role="tab"
                                         aria-controls="reviews" aria-selected="false">reviews</a>
-                                </li>
+                                </li> --}}
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="overview" role="tabpanel"
                                     aria-labelledby="overview-tab1">
                                     <div class="border radius_all_5 tab_box">
-                                        <p>Lorem Ipsu. is simply dummy text of the printing and typesetting industry. Lorem
-                                            Ipsum has been the industry's standard dummy text ever since the 1500s when an
-                                            unknown printer took a galley of type and scrambled
-                                            it to make a type specimen book. It has survived not only five centuries, but
-                                            also the leap into electronic typesetting. It was popularised in the 1960s with
-                                            the release of Letraset sheets containing Lorem Ipsum
-                                            passages, and more recently with desktop publishing software like Aldus
-                                            PageMaker including versions of Lorem Ipsum.</p>
+                                        <p>{{ $course->courseSummery }}</p>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="curriculum" role="tabpanel"
+                                {{-- <div class="tab-pane fade" id="curriculum" role="tabpanel"
                                     aria-labelledby="curriculum-tab1">
                                     <div id="accordion" class="accordion">
                                         <div class="card">
@@ -152,28 +146,27 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="tab-pane fade" id="instructor" role="tabpanel"
                                     aria-labelledby="instructor-tab1">
                                     <div class="course_author">
-                                        <div class="author_img">
-                                            <img class="radius_all_5" src="{{ asset('assets/user/images/client_img1.jpg') }}"
+                                        <div class="author_img" style="width: 100px">
+                                            <img class="radius_all_5" style="width: 100%"
+                                                src="{{ asset('images/teacher') . '/' . $course->teacherImage }}"
                                                 alt="client_img1" />
                                         </div>
                                         <div class="author_meta">
                                             <div class="author_intro">
-                                                <h6>Alia Noor</h6>
-                                                <span class="text_default">Co-Founder</span>
+                                                <h6>{{ $course->name }}</h6>
+                                                <span class="text_default">{{ $course->position }}</span>
                                             </div>
                                             <div class="author_desc">
-                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                    accusantium doloremque laudantium, quaeillo inventore veritatis et quasi
-                                                    architecto beatae vitae dicta sunt explicabo.</p>
+                                                <p>{{ $course->about }}</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="reviews" role="tabpanel"
+                                {{-- <div class="tab-pane fade" id="reviews" role="tabpanel"
                                     aria-labelledby="reviews-tab1">
                                     <div class="border radius_all_5 tab_box">
                                         <div class="course_rating">
@@ -329,7 +322,7 @@
                                             </form>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <div class="row">
@@ -341,76 +334,46 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="content_box radius_all_10 box_shadow1">
-                                    <div class="content_img radius_ltrt_10">
-                                        <a href="#"><img src="{{ asset('assets/user/images/course_img1.jpg') }}" alt="course_img1"></a>
-                                    </div>
-                                    <div class="content_desc">
-                                        <h4 class="content_title"><a href="#">Nullam id varius nunc id varius
-                                                nunc</a></h4>
-                                        <p>If you are going to use a passage of Lorem Ipsum you need to be sure anything
-                                            embarrassing hidden in the middle of text.</p>
-                                        <div class="courses_info">
-                                            <div class="rating_stars">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star-half"></i>
+                            @foreach ($oldCourses as $course)
+                                <div class="col-md-6">
+                                    <div class="content_box radius_all_10 box_shadow1 animation" data-animation="fadeInUp"
+                                        data-animation-delay="0.01s">
+                                        <div class="content_img radius_ltrt_10">
+                                            <a href="#"><img
+                                                    src="{{ asset('images/course') . '/' . $course->courseImage }}"
+                                                    alt="course_img1" /></a>
+                                        </div>
+                                        <div class="content_desc">
+                                            <h4 class="content_title"><a
+                                                    href="/courses/{{ $course->id }}">{{ $course->courseName }}</a></h4>
+                                            <p>{{ $course->courseSummery }}</p>
+                                            <div class="courses_info">
+                                                <div class="rating_stars">
+                                                    <i class="ion-android-star"></i>
+                                                    <i class="ion-android-star"></i>
+                                                    <i class="ion-android-star"></i>
+                                                    <i class="ion-android-star"></i>
+                                                    <i class="ion-android-star-half"></i>
+                                                </div>
+                                                <ul class="list_none content_meta">
+                                                    <li><a href="#"><i class="ti-user"></i>31</a></li>
+                                                    <li><a href="#"><i class="ti-heart"></i>10</a></li>
+                                                </ul>
                                             </div>
-                                            <ul class="list_none content_meta">
-                                                <li><a href="#"><i class="ti-user"></i>31</a></li>
-                                                <li><a href="#"><i class="ti-heart"></i>10</a></li>
-                                            </ul>
                                         </div>
-                                    </div>
-                                    <div class="content_footer">
-                                        <div class="teacher">
-                                            <a href="#"><img src="{{ asset('assets/user/images/user1.jpg') }}"
-                                                    alt="user1"><span>Alia Noor</span></a>
-                                        </div>
-                                        <div class="price">
-                                            <span class="alert alert-success">Free</span>
+                                        <div class="content_footer">
+                                            <div class="teacher">
+                                                <a href="#"><img
+                                                        src="{{ asset('images/teacher') . '/' . $course->teacherImage }}"
+                                                        alt="user1"><span>{{ $course->name }}</span></a>
+                                            </div>
+                                            <div class="price">
+                                                <span class="alert alert-success">₹{{ $course->price }}</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="content_box radius_all_10 box_shadow1">
-                                    <div class="content_img radius_ltrt_10">
-                                        <a href="#"><img src="{{ asset('assets/user/images/course_img2.jpg') }}" alt="course_img2"></a>
-                                    </div>
-                                    <div class="content_desc">
-                                        <h4 class="content_title"><a href="#">Nullam id varius nunc id varius
-                                                nunc</a></h4>
-                                        <p>If you are going to use a passage of Lorem Ipsum you need to be sure anything
-                                            embarrassing hidden in the middle of text.</p>
-                                        <div class="courses_info">
-                                            <div class="rating_stars">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star-half"></i>
-                                            </div>
-                                            <ul class="list_none content_meta">
-                                                <li><a href="#"><i class="ti-user"></i>31</a></li>
-                                                <li><a href="#"><i class="ti-heart"></i>10</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="content_footer">
-                                        <div class="teacher">
-                                            <a href="#"><img src="{{ asset('assets/user/images/user2.jpg') }}"
-                                                    alt="user2"><span>Dany Core</span></a>
-                                        </div>
-                                        <div class="price">
-                                            <span class="alert alert-info">$49</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -427,45 +390,24 @@
                         <div class="widget widget_recent_course">
                             <h5 class="widget_title">Letest Course</h5>
                             <ul class="recent_post border_bottom_dash list_none">
-                                <li>
-                                    <div class="post_footer">
-                                        <div class="post_img">
-                                            <a href="#"><img src="{{ asset('assets/user/images/letest_course1.jpg') }}"
-                                                    alt="letest_course1"></a>
+                                @foreach ($newCourses as $course)
+                                    <li>
+                                        <div class="post_footer">
+                                            <div class="post_img">
+                                                <a href="#"><img
+                                                        src="{{ asset('images/course') . '/' . $course->image }}"
+                                                        alt="letest_course1"></a>
+                                            </div>
+                                            <div class="post_content">
+                                                <h6><a href="#">{{ $course->courseName }}</a></h6>
+                                                <span class="text-success small">{{ $course->price }}</span>
+                                            </div>
                                         </div>
-                                        <div class="post_content">
-                                            <h6><a href="#">Nullam id varius nunc id varius nunc</a></h6>
-                                            <span class="text-success small">Free</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="post_footer">
-                                        <div class="post_img">
-                                            <a href="#"><img src="{{ asset('assets/user/images/letest_course2.jpg') }}"
-                                                    alt="letest_course2"></a>
-                                        </div>
-                                        <div class="post_content">
-                                            <h6><a href="#">Nullam id varius nunc id varius nunc</a></h6>
-                                            <span class="text-info small">$49</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="post_footer">
-                                        <div class="post_img">
-                                            <a href="#"><img src="{{ asset('assets/user/images/letest_course3.jpg') }}"
-                                                    alt="letest_course3"></a>
-                                        </div>
-                                        <div class="post_content">
-                                            <h6><a href="#">Nullam id varius nunc id varius nunc</a></h6>
-                                            <span class="text-success small">Free</span>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
-                        <div class="widget widget_categories">
+                        {{-- <div class="widget widget_categories">
                             <h5 class="widget_title">Course Categories</h5>
                             <ul>
                                 <li><a href="#"><span class="categories_name">Development</span><span
@@ -479,14 +421,15 @@
                                 <li><a href="#"><span class="categories_name">Photography</span><span
                                             class="categories_num">(12)</span></a></li>
                             </ul>
-                        </div>
-                        <div class="widget widget_recent_post">
+                        </div> --}}
+                        {{-- <div class="widget widget_recent_post">
                             <h5 class="widget_title">Recent Post</h5>
                             <ul class="recent_post border_bottom_dash list_none">
                                 <li>
                                     <div class="post_footer">
                                         <div class="post_img">
-                                            <a href="#"><img src="{{ asset('assets/user/images/letest_post1.jpg') }}"
+                                            <a href="#"><img
+                                                    src="{{ asset('assets/user/images/letest_post1.jpg') }}"
                                                     alt="letest_post1"></a>
                                         </div>
                                         <div class="post_content">
@@ -498,7 +441,8 @@
                                 <li>
                                     <div class="post_footer">
                                         <div class="post_img">
-                                            <a href="#"><img src="{{ asset('assets/user/images/letest_post2.jpg') }}"
+                                            <a href="#"><img
+                                                    src="{{ asset('assets/user/images/letest_post2.jpg') }}"
                                                     alt="letest_post1"></a>
                                         </div>
                                         <div class="post_content">
@@ -510,7 +454,8 @@
                                 <li>
                                     <div class="post_footer">
                                         <div class="post_img">
-                                            <a href="#"><img src="{{ asset('assets/user/images/letest_post3.jpg') }}"
+                                            <a href="#"><img
+                                                    src="{{ asset('assets/user/images/letest_post3.jpg') }}"
                                                     alt="letest_post1"></a>
                                         </div>
                                         <div class="post_content">
@@ -520,8 +465,8 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="widget widget_tags">
+                        </div> --}}
+                        {{-- <div class="widget widget_tags">
                             <h5 class="widget_title">tags</h5>
                             <div class="tags">
                                 <a href="#">General</a>
@@ -533,7 +478,7 @@
                                 <a href="#">Quotes</a>
                                 <a href="#">Advertisement</a>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

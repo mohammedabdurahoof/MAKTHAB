@@ -44,7 +44,7 @@ Route::get('/courses', function () {
 });
 
 Route::get('/courses/{id}', function ($id) {
-    $course = Courses::where('courses.id', $id)->join('teachers', 'courses.teacherId', 'teachers.id')->select('courses.image as courseImage', 'teachers.image as teacherImage', 'courses.id', 'teacherId', 'courseName', 'price', 'position', 'description', 'name', 'category', 'duration', 'courseSummery', 'requirements')->first();
+    $course = Courses::where('courses.id', $id)->join('teachers', 'courses.teacherId', 'teachers.id')->select('courses.image as courseImage', 'teachers.image as teacherImage', 'courses.id', 'teacherId', 'courseName', 'price', 'position', 'name', 'category', 'courseSummery', 'about')->first();
     $newCourses = Courses::limit(4)->where('id', '!=', $id)->get();
     $oldCourses = Courses::latest('courses.created_at')->where('courses.id', '!=', $id)->limit(3)->join('teachers', 'courses.teacherId', 'teachers.id')->select('courses.image as courseImage', 'teachers.image as teacherImage', 'courses.id', 'teacherId', 'courseName', 'price', 'name')->get();
     return view('user.windows.courses.single', ['name' => 'Courses', 'course' => $course, 'newCourses' => $newCourses, 'oldCourses' => $oldCourses]);
