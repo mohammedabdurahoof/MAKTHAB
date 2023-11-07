@@ -23,12 +23,14 @@ class GalleryController extends Controller
     {
         // dd($request->post());
         $request->validate([
+            'title' => 'required',
+            'category' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
         // dd($request->post());
         $imageName = time() . '.' . request()->image->getClientOriginalExtension();
         request()->image->move(public_path('images/gallery'), $imageName);
-        Gallery::create(['name' => $imageName]);
+        Gallery::create($request->post() + ['image' => $imageName]);
         return redirect()->route('gallery.index')->with('success', 'Image has been added successfully.');
     }
     public function show(Gallery $event)

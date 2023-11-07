@@ -16,7 +16,7 @@ Route::get('/', function () {
     $events = Event::latest()->limit(3)->get();
     return view('user.windows.home.index', ['course' => $course, 'teachers' => $teachers,  'events' => $events]);
     // return view('welcome');
-});
+})->name('home');
 
 Route::get('/contact', function () {
     return view('user.windows.contact.index', ['name' => 'Contact']);

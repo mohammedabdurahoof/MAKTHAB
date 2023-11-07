@@ -48,6 +48,24 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="mb-3 col-md-6">
+                                        <label class="form-label" for="Title">Title</label>
+                                        <input type="text" name="title" class="form-control" id="Title" required
+                                            placeholder="Title">
+                                    </div>
+
+                                    <div class="mb-3 col-md-6">
+                                        <label class="form-label" for="Category">Category</label>
+                                        <select id="Category" name="category" required class="form-control">
+                                            <option selected="" value="null">Choose...</option>
+                                            <option value="events">Events</option>
+                                            <option value="campus">Campus</option>
+                                            <option value="library">Library</option>
+                                        </select>
+                                    </div>
+
+                                </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div>

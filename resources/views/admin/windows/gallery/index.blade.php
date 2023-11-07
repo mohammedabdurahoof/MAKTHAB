@@ -26,7 +26,7 @@
                             <div class="row">
                                 @foreach ($gallery as $gallery)
                                     <div class="col-md-4 mb-4">
-                                        <img src="{{ asset('images/gallery') . '/' . $gallery->name }}" alt="image"
+                                        <img src="{{ asset('images/gallery') . '/' . $gallery->image }}" alt="image"
                                             style="height: auto; max-width: 100%;" srcset="">
                                         <form action="{{ route('gallery.destroy', $gallery->id) }}" method="POST">
                                             @csrf
