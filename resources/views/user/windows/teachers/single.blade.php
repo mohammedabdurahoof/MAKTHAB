@@ -9,26 +9,26 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="team_single radius_all_10 box_shadow1">
                         <div class="team_img">
-                            <img class="radius_ltrt_10" src="{{ asset('assets/user/images/team_img_big.jpg') }}" alt="team_img_big">
+                            <img class="radius_ltrt_10" src="{{ asset('images/teacher') . '/' . $teacher->image }}" alt="team_img_big">
                         </div>
                         <div class="team_single_info">
                             <div class="team_name">
-                                <h5>Aden Smith</h5>
-                                <span>Head Of Department</span>
+                                <h5>{{$teacher->name}}</h5>
+                                <span>{{$teacher->position}}</span>
                             </div>
                             <h6 class="mb-3">Contact info:</h6>
                             <ul class="contact_info list_none">
                                 <li>
                                     <span>Address:</span>
-                                    <address>Califonia Street san Francisco, CA</address>
+                                    <address>{{$teacher->address}}</address>
                                 </li>
                                 <li>
                                     <span>Email:</span>
-                                    <a href="mailto:info@sitename.com">info@sitename.com</a>
+                                    <a href="mailto:{{$teacher->email}}">{{$teacher->email}}</a>
                                 </li>
                                 <li>
                                     <span>Phone:</span>
-                                    <p>+ 457 789 789 65</p>
+                                    <p>{{$teacher->phone}}</p>
                                 </li>
                                 <li>
                                     <span>Social:</span>
@@ -49,16 +49,7 @@
                 <div class="col-lg-8 col-md-6">
                     <div class="teacher_desc mt-4 mt-md-0">
                         <h5 class="mb-3">About Us</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vero expedita fugiat illo quasi
-                            doloremque, in unde omnis sint assumenda! Quaerat in, reprehenderit corporis voluptatum natus
-                            sequi reiciendis ullam. Quam eaque
-                            dolorum voluptates cupiditate explicabo.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.</p>
+                        <p>{{$teacher->about}}</p>
                     </div>
                     <div id="accordion-1" class="accordion">
                         <div class="card">
@@ -68,8 +59,7 @@
                             </div>
                             <div id="collapse-1-One" class="collapse show" aria-labelledby="heading-1-One">
                                 <div class="card-body">
-                                    <p>Latin literature from 45 BC</p>
-                                    <p>Vivamus bibendum magna</p>
+                                    <p>{{$teacher->education}}</p>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +70,7 @@
                             </div>
                             <div id="collapse-1-Two" class="collapse show" aria-labelledby="heading-1-Two">
                                 <div class="card-body">
-                                    <p>10+ Years of Experience</p>
+                                    <p>{{$teacher->yearsofExperience}}+ Years of Experience</p>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +81,7 @@
                             </div>
                             <div id="collapse-1-Three" class="collapse show" aria-labelledby="heading-1-Three">
                                 <div class="card-body">
-                                    <p>Chemistry Teacher</p>
+                                    <p>{{$teacher->interest}}</p>
                                 </div>
                             </div>
                         </div>

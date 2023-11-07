@@ -20,11 +20,12 @@
                         <div class="event_title">
                             <div class="row align-items-end">
                                 <div class="col-md-8">
-                                    <h2>{{$event->name}}</h2>
+                                    <h2>{{ $event->name }}</h2>
                                     <ul class="list_none content_meta mt-2">
                                         {{-- <li><i class="ti-user"></i> <a href="#" class="text_default">John Wood</a>
                                         </li> --}}
-                                        <li><i class="ti-location-pin"></i><span class="text_default">{{$event->place}}</span>
+                                        <li><i class="ti-location-pin"></i><span
+                                                class="text_default">{{ $event->place }}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -42,7 +43,7 @@
                             </div>
                         </div>
                         <div class="entry_content">
-                            <p>{{$event-> description}}</p>
+                            <p>{{ $event->description }}</p>
                         </div>
                         {{-- <div class="event_map">
                             <iframe
@@ -88,45 +89,24 @@
                         <div class="widget widget_recent_course">
                             <h5 class="widget_title">Letest Course</h5>
                             <ul class="recent_post border_bottom_dash list_none">
-                                <li>
-                                    <div class="post_footer">
-                                        <div class="post_img">
-                                            <a href="#"><img src="{{ asset('assets/user/images/letest_course1.jpg') }}"
-                                                    alt="letest_course1"></a>
+                                @foreach ($newCourses as $course)
+                                    <li>
+                                        <div class="post_footer">
+                                            <div class="post_img">
+                                                <a href="#"><img
+                                                        src="{{ asset('images/course') . '/' . $course->image }}"
+                                                        alt="letest_course1"></a>
+                                            </div>
+                                            <div class="post_content">
+                                                <h6><a href="#">{{ $course->courseName }}</a></h6>
+                                                <span class="text-success small">{{ $course->price }}</span>
+                                            </div>
                                         </div>
-                                        <div class="post_content">
-                                            <h6><a href="#">Nullam id varius nunc id varius nunc</a></h6>
-                                            <span class="text-success small">Free</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="post_footer">
-                                        <div class="post_img">
-                                            <a href="#"><img src="{{ asset('assets/user/images/letest_course2.jpg') }}"
-                                                    alt="letest_course2"></a>
-                                        </div>
-                                        <div class="post_content">
-                                            <h6><a href="#">Nullam id varius nunc id varius nunc</a></h6>
-                                            <span class="text-info small">$49</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="post_footer">
-                                        <div class="post_img">
-                                            <a href="#"><img src="{{ asset('assets/user/images/letest_course3.jpg') }}"
-                                                    alt="letest_course3"></a>
-                                        </div>
-                                        <div class="post_content">
-                                            <h6><a href="#">Nullam id varius nunc id varius nunc</a></h6>
-                                            <span class="text-success small">Free</span>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
-                        <div class="widget widget_categories">
+                        {{-- <div class="widget widget_categories">
                             <h5 class="widget_title">Course Categories</h5>
                             <ul>
                                 <li><a href="#"><span class="categories_name">Development</span><span
@@ -140,8 +120,8 @@
                                 <li><a href="#"><span class="categories_name">Photography</span><span
                                             class="categories_num">(12)</span></a></li>
                             </ul>
-                        </div>
-                        <div class="widget widget_recent_post">
+                        </div> --}}
+                        {{-- <div class="widget widget_recent_post">
                             <h5 class="widget_title">Recent Post</h5>
                             <ul class="recent_post border_bottom_dash list_none">
                                 <li>
@@ -181,8 +161,8 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="widget widget_tags">
+                        </div> --}}
+                        {{-- <div class="widget widget_tags">
                             <h5 class="widget_title">tags</h5>
                             <div class="tags">
                                 <a href="#">General</a>
@@ -194,7 +174,7 @@
                                 <a href="#">Quotes</a>
                                 <a href="#">Advertisement</a>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

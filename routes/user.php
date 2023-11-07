@@ -56,8 +56,9 @@ Route::get('/events', function () {
 });
 
 Route::get('/events/{id}', function ($id) {
+    $newCourses = Courses::limit(4)->get();
     $event = Event::where('id', $id)->first();
-    return view('user.windows.events.single', ['name' => 'Events', 'event' => $event]);
+    return view('user.windows.events.single', ['name' => 'Events', 'event' => $event, 'newCourses' => $newCourses]);
 });
 
 Route::get('/event-register', function () {
@@ -77,11 +78,11 @@ Route::post('/event-register', function (Request $request) {
         'time' => ['required', 'string', 'max:255'],
         'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
     ]);
-    
+
     $imageName = time() . '.' . request()->image->getClientOriginalExtension();
     request()->image->move(public_path('images/event-register'), $imageName);
     EventRegister::create($request->post() + ['image' => $imageName]);
-    return back()->with('success','successfully registered');
+    return back()->with('success', 'successfully registered');
 });
 
 Route::get('/gallery', function () {
