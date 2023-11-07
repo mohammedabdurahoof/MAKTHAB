@@ -6,7 +6,6 @@
     @include('user.windows.about.partials.about')
     @include('user.windows.about.partials.teacher')
     @include('user.windows.about.partials.counter')
-    @include('user.windows.about.partials.testimonial')
 
 
     <!-- END SECTION CALL TO ACTION -->
